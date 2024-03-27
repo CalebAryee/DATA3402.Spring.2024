@@ -18,10 +18,28 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 10,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "class counter:\n",
+    "    def __init__(self, maxValue):\n",
+    "        self.maxValue = maxValue\n",
+    "        self.counterVal= 0\n",
+    "\n",
+    "\n",
+    "    def val(self):\n",
+    "        if self.counterVal < self.maxVal:\n",
+    "            self.counterVal += 1\n",
+    "            return self.counterVal\n",
+    "        else:\n",
+    "            print(\"Counter exceeds max value\")\n",
+    "            return None\n",
+    "\n",
+    "    def orig(self):\n",
+    "        self.counterVal = 0\n",
+    "c=counter"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -32,10 +50,41 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 16,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "98\n"
+     ]
+    }
+   ],
+   "source": [
+    "class counter:\n",
+    "    def __init__(self, maxValue):\n",
+    "        self.maxValue = maxValue\n",
+    "        self.counterVal= 0\n",
+    "\n",
+    "\n",
+    "    def val(self):\n",
+    "        if self.counterVal < self.maxValue:\n",
+    "            self.counterVal += 1\n",
+    "            return self.counterVal\n",
+    "        else:\n",
+    "            print(\"Counter exceeds max value\")\n",
+    "            return None\n",
+    "\n",
+    "    def orig(self):\n",
+    "        self.counterVal = 0\n",
+    "    def getcounter(self):\n",
+    "        return self.counterVal\n",
+    "    def getmax(self):\n",
+    "        return self.maxValue\n",
+    "c=counter(98)\n",
+    "print(c.getmax())\n"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -46,10 +95,34 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 27,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "81\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "class rectangle:\n",
+    "    x=0\n",
+    "    y=0\n",
+    "    def __init__(self,width,length,x,y):\n",
+    "        self.width=width\n",
+    "        self.length=length\n",
+    "        self.x=x\n",
+    "        self.y=y\n",
+    "    def area(self):\n",
+    "        return (self.length*self.width)\n",
+    "    def Perimeter(self):\n",
+    "        return (2*(self.length)+(2*(self.width)))\n",
+    "c=rectangle(9,9,0,0)  \n",
+    "print(c.area())"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -60,10 +133,34 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 31,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "56.548667764616276\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "class circle:\n",
+    "    x=0\n",
+    "    y=0\n",
+    "    def __init__(self,radius,x,y):\n",
+    "        self.radius=radius\n",
+    "       \n",
+    "        self.x=x\n",
+    "        self.y=y\n",
+    "    def area(self):\n",
+    "        return (math.pi*self.radius*self.radius)\n",
+    "    def perimeter(self):\n",
+    "        return (2*math.pi*self.radius)\n",
+    "c=circle(9,0,0)  \n",
+    "print(c.perimeter())"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -74,10 +171,41 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 36,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "class Shape:\n",
+    "    def area(self):\n",
+    "        pass\n",
+    "    def perimeter(self):\n",
+    "        pass\n",
+    "class circle(Shape):\n",
+    "    x=0\n",
+    "    y=0\n",
+    "    def __init__(self,radius,x,y):\n",
+    "        self.radius=radius\n",
+    "       \n",
+    "        self.x=x\n",
+    "        self.y=y\n",
+    "    def area(self):\n",
+    "        return (math.pi*self.radius*self.radius)\n",
+    "    def perimeter(self):\n",
+    "        return (2*math.pi*self.radius)\n",
+    "\n",
+    "class rectangle(Shape):\n",
+    "    x=0\n",
+    "    y=0\n",
+    "    def __init__(self,width,length,x,y):\n",
+    "        self.width=width\n",
+    "        self.length=length\n",
+    "        self.x=x\n",
+    "        self.y=y\n",
+    "    def area(self):\n",
+    "        return (self.length*self.width)\n",
+    "    def Perimeter(self):\n",
+    "        return (2*(self.length)+(2*(self.width)))\n"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -88,10 +216,27 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 37,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "class Triangle(Shape):\n",
+    "    \n",
+    "    def __init__(self, base, height, s1, s2, s3):\n",
+    "        self.base = base\n",
+    "        self.height = height\n",
+    "        self.side1 = s1\n",
+    "        self.side2 = s2\n",
+    "        self.side3 = s3\n",
+    "\n",
+    "   \n",
+    "    def calculate_area(self):\n",
+    "        return 0.5 * self.base * self.height\n",
+    "\n",
+    "    \n",
+    "    def calculate_perimeter(self):\n",
+    "        return self.side1 + self.side2 + self.side3"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -102,10 +247,77 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 50,
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Shape:\n",
+    "    def area(self):\n",
+    "        pass\n",
+    "    def perimeter(self):\n",
+    "        pass\n",
+    "    def Points(self):   #This is the function for the point\n",
+    "        points_list = []\n",
+    "        for x in range(16):\n",
+    "            for y in range(16):\n",
+    "                if x == y:\n",
+    "                    point = (x,y)\n",
+    "                # add points objects to the list\n",
+    "                    points_list.append(point)\n",
+    "                \n",
+    "        return points_list \n",
+    "class circle(Shape):\n",
+    "    \n",
+    "    def __init__(self,radius,x,y):\n",
+    "        self.radius=radius\n",
+    "       \n",
+    "        self.x=x\n",
+    "        self.y=y\n",
+    "    def area(self):\n",
+    "        return (math.pi*self.radius*self.radius)\n",
+    "    def perimeter(self):\n",
+    "        return (2*math.pi*self.radius)\n",
+    "    \n",
+    "c=circle(4,6,7)\n",
+    "print(c.Points())\n",
+    "class rectangle(Shape):\n",
+    "    x=0\n",
+    "    y=0\n",
+    "    def __init__(self,width,length,x,y):\n",
+    "        self.width=width\n",
+    "        self.length=length\n",
+    "        self.x=x\n",
+    "        self.y=y\n",
+    "    def area(self):\n",
+    "        return (self.length*self.width)\n",
+    "    def Perimeter(self):\n",
+    "        return (2*(self.length)+(2*(self.width)))\n",
+    "\n",
+    "class Triangle(Shape):\n",
+    "    \n",
+    "    def __init__(self, base, height, s1, s2, s3):\n",
+    "        self.base = base\n",
+    "        self.height = height\n",
+    "        self.side1 = s1\n",
+    "        self.side2 = s2\n",
+    "        self.side3 = s3\n",
+    "\n",
+    "   \n",
+    "    def calculate_area(self):\n",
+    "        return 0.5 * self.base * self.height\n",
+    "\n",
+    "    \n",
+    "    def calculate_perimeter(self):\n",
+    "        return self.side1 + self.side2 + self.side3\n"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -304,9 +516,9 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.9.6"
+   "version": "3.12.1"
   }
  },
  "nbformat": 4,
- "nbformat_minor": 2
+ "nbformat_minor": 4
 }
